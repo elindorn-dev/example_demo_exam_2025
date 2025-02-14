@@ -85,9 +85,23 @@ namespace PR28_Autorization
                     break;
                 }
             }
-            bool result_query = product_manipulation.insertProduct(artic, titl, des, categor, image_name, man, sup, uni, cost, disco, insklad, maxdisco);
-            if (result_query) { MessageBox.Show("Товар добавлен."); }
-            else { MessageBox.Show("Товар не был добавлен!"); }
+            
+            if (WorkspaceUser.AddEditMode == "ADD")
+            {
+                if (article.Text.Length == 6)
+                {
+                bool result_query = product_manipulation.insertProduct(artic, titl, des, categor, image_name, man, sup, uni, cost, disco, insklad, maxdisco);
+                if (result_query) { MessageBox.Show("Товар добавлен."); File.Copy(path, $"Товар_import/{Path.GetFileName(path)}"); }
+                else { MessageBox.Show("Товар не был добавлен!"); }
+                }
+            }
+            else
+            {
+                article.Enabled = false;
+                bool result_query = product_manipulation.editProduct(artic, titl, des, categor, image_name, man, sup, uni, cost, disco, insklad, maxdisco);
+                if (result_query) { MessageBox.Show("Товар изменен."); File.Copy(path, $"Товар_import/{Path.GetFileName(path)}"); }
+                else { MessageBox.Show("Товар не был изменен!"); }
+            }
         }
 
         private void AddProduct_Load(object sender, EventArgs e)
@@ -95,7 +109,8 @@ namespace PR28_Autorization
             switch (WorkspaceUser.AddEditMode)
             {
                 case "ADD": addedit_button.Text = "Добавить"; break;
-                case "EDIT": 
+                case "EDIT":
+                    article.Enabled = false;
                     addedit_button.Text = "Редактировать";
                     List<string> product_values = new List<string>();
                     string method = $"product WHERE ProductArticleNumber = '{WorkspaceUser.AddEditId}'";
@@ -172,6 +187,18 @@ namespace PR28_Autorization
             if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void article_TextChanged(object sender, EventArgs e)
+        {
+            if (article.Text.Length != 6)
+            {
+                article.BackColor = Color.FromArgb(255, 192, 192);
+            }
+            else
+            {
+                article.BackColor = Color.White;
             }
         }
     }

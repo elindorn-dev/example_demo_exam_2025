@@ -49,6 +49,7 @@ namespace PR28_Autorization
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -137,11 +138,12 @@ namespace PR28_Autorization
             this.user_main_label.AutoSize = true;
             this.user_main_label.Dock = System.Windows.Forms.DockStyle.Right;
             this.user_main_label.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.user_main_label.Location = new System.Drawing.Point(891, 0);
+            this.user_main_label.Location = new System.Drawing.Point(829, 0);
             this.user_main_label.Margin = new System.Windows.Forms.Padding(3, 0, 10, 0);
             this.user_main_label.Name = "user_main_label";
-            this.user_main_label.Size = new System.Drawing.Size(0, 25);
+            this.user_main_label.Size = new System.Drawing.Size(62, 25);
             this.user_main_label.TabIndex = 8;
+            this.user_main_label.Text = "00000";
             this.user_main_label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // searchTextBox
@@ -162,9 +164,10 @@ namespace PR28_Autorization
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.Location = new System.Drawing.Point(812, 12);
+            this.textBox2.Location = new System.Drawing.Point(33, 68);
             this.textBox2.MaxLength = 2;
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(47, 33);
             this.textBox2.TabIndex = 23;
             this.textBox2.Text = "1";
@@ -173,17 +176,18 @@ namespace PR28_Autorization
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(792, 12);
+            this.button3.Location = new System.Drawing.Point(13, 68);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(19, 33);
             this.button3.TabIndex = 22;
             this.button3.Text = "<";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(860, 12);
+            this.button2.Location = new System.Drawing.Point(81, 68);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(19, 33);
             this.button2.TabIndex = 21;
@@ -251,12 +255,24 @@ namespace PR28_Autorization
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(131, 60);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(173, 43);
+            this.button4.TabIndex = 24;
+            this.button4.Text = "Оформить заказ";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(891, 604);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -299,5 +315,6 @@ namespace PR28_Autorization
         private System.Windows.Forms.DataGridViewImageColumn Image;
         private System.Windows.Forms.DataGridViewTextBoxColumn Info;
         private System.Windows.Forms.DataGridViewTextBoxColumn Discount;
+        private System.Windows.Forms.Button button4;
     }
 }

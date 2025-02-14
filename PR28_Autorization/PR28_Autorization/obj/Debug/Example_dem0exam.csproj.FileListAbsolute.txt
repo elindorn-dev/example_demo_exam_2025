@@ -44,3 +44,47 @@ C:\Users\Dmitry\Desktop\11\PR28_Autorization\PR28_Autorization\obj\Debug\Example
 C:\Users\Dmitry\Desktop\11\PR28_Autorization\PR28_Autorization\obj\Debug\Example_dem0exam.csproj.CopyComplete
 C:\Users\Dmitry\Desktop\11\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.exe
 C:\Users\Dmitry\Desktop\11\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.pdb
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\bin\Debug\PR28_Autorization.exe.config
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\bin\Debug\PR28_Autorization.exe
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\bin\Debug\PR28_Autorization.pdb
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\bin\Debug\System.Memory.dll
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\bin\Debug\System.Buffers.dll
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\Example_dem0exam.csproj.AssemblyReference.cache
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.AddEditProduct.resources
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.Autorization.resources
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.ConnectParameters.resources
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.MainAdmin.resources
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.MainUser.resources
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.Product.resources
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.Properties.Resources.resources
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\Example_dem0exam.csproj.GenerateResource.cache
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\Example_dem0exam.csproj.CoreCompileInputs.cache
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\Example_dem0exam.csproj.CopyComplete
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.exe
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.pdb
+C:\Users\student250\Downloads\example_demo_exam_2025-main\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.Zakaz.resources
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\bin\Debug\PR28_Autorization.exe.config
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\bin\Debug\PR28_Autorization.exe
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\bin\Debug\PR28_Autorization.pdb
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\bin\Debug\MySql.Data.dll
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\bin\Debug\System.Memory.dll
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\bin\Debug\System.Buffers.dll
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\bin\Debug\MySql.Data.xml
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\Example_dem0exam.csproj.AssemblyReference.cache
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\Example_dem0exam.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.AddEditProduct.resources
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.Autorization.resources
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.ConnectParameters.resources
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.MainAdmin.resources
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.MainUser.resources
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.Product.resources
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.Properties.Resources.resources
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.Zakaz.resources
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\Example_dem0exam.csproj.GenerateResource.cache
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\Example_dem0exam.csproj.CoreCompileInputs.cache
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\Example_dem0exam.csproj.CopyComplete
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.exe
+C:\Users\Dmitry\Downloads\PR28_Autorization (2)\PR28_Autorization\PR28_Autorization\obj\Debug\PR28_Autorization.pdb

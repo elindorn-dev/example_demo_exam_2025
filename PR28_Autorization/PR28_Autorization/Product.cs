@@ -14,6 +14,7 @@ namespace PR28_Autorization
     public partial class Product : Form
     {
         private bool placeholder_visible = true;
+        int count = 1;
         public Product()
         {
             InitializeComponent();
@@ -22,24 +23,90 @@ namespace PR28_Autorization
         DataTable products_table;
         private void LoadProductDataGridView()
         {
-            foreach (DataRow row in products_table.Rows)
+            count = Convert.ToInt32(textBox2.Text);
+            dataGridView1.Rows.Clear();
+            int pages = products_table.Rows.Count / 20 + 1;
+            if (count == pages)
             {
-                string path_image = "picture.png";
-                Image o;
-                if (row[4].ToString() != "")
+                for (int i = (count - 1) * 20; i < count * 20 - (20 - products_table.Rows.Count % 20); i++)
                 {
-                    path_image = $"Товар_import/{row[4]}";
+                    DataRow row = products_table.Rows[i];
+                    string path_image = "picture.png";
+                    Image o;
+                    if (row[4].ToString() != "")
+                    {
+                        path_image = $"Товар_import/{row[4]}";
+                    }
+                    try
+                    {
+                        o = new Bitmap($"{path_image}");
+                    }
+                    catch
+                    {
+                        o = new Bitmap($"picture.png");
+                    }
+                    dataGridView1.Rows.Add(o, $"{row[1]}\n{row[2]}\n{row[5]}\n{row[8]}", $"{row[9]}");
                 }
-                try
-                {
-                    o = new Bitmap($"{path_image}");
-                }
-                catch
-                {
-                    o = new Bitmap($"picture.png");
-                }
-                dataGridView1.Rows.Add(o, $"{row[1]}\n{row[2]}\n{row[5]}\n{row[8]}", $"{row[9]}");
             }
+            else
+            {
+                for (int i = (count - 1) * 20; i < count * 20; i++)
+                {
+                    DataRow row = products_table.Rows[i];
+                    Image o;
+                    string path_image = "picture.png";
+                    if (row[4].ToString() != "")
+                    {
+                        path_image = $"Товар_import/{row[4]}";
+                    }
+                    try
+                    {
+                        o = new Bitmap($"{path_image}");
+                    }
+                    catch
+                    {
+                        o = new Bitmap($"picture.png");
+                    }
+                    dataGridView1.Rows.Add(o, $"{row[1]}\n{row[2]}\n{row[5]}\n{row[8]}", $"{row[9]}");
+                }
+            }
+            //for (int i = 0; i < products_table.Rows.Count;i++)
+            //{
+            //    DataRow row = products_table.Rows[i];
+            //    string path_image = "picture.png";
+            //    Image o;
+            //    if (row[4].ToString() != "")
+            //    {
+            //        path_image = $"Товар_import/{row[4]}";
+            //    }
+            //    try
+            //    {
+            //        o = new Bitmap($"{path_image}");
+            //    }
+            //    catch
+            //    {
+            //        o = new Bitmap($"picture.png");
+            //    }
+            //    dataGridView1.Rows.Add(o, $"{row[1]}\n{row[2]}\n{row[5]}\n{row[8]}", $"{row[9]}");
+            //}
+            //foreach (DataRow row in products_table.Rows)
+            //{
+            //    string path_image = "picture.png";
+            //    Image o;
+            //    if (row[4].ToString() != "")
+            //    {
+            //        path_image = $"Товар_import/{row[4]}";
+            //    }
+            //    try
+            //    {
+            //        o = new Bitmap($"{path_image}");
+            //    }
+            //    catch
+            //    {
+            //        o = new Bitmap($"picture.png");
+            //    }
+            //    dataGridView1.Rows.Add(o, $"{row[1]}\n{row[2]}\n{row[5]}\n{row[8]}", $"{row[9]}");
+            //}
         }
 
         private void Product_Load(object sender, EventArgs e)
@@ -119,8 +186,7 @@ namespace PR28_Autorization
                 LoadProductDataGridView();
             }
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void SortFilter()
         {
             //MessageBox.Show($"{comboBox1.SelectedIndex}");
             dataGridView1.Rows.Clear();
@@ -140,67 +206,31 @@ namespace PR28_Autorization
             }
             method = $"product {method_filter} {method_sort}";
             products_table = db_connection.LoadData(method);
-            LoadProductDataGridView();
+            if (products_table.Rows.Count != 0)
+            {
+                LoadProductDataGridView();
+            }
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SortFilter();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show($"{comboBox1.SelectedIndex}");
-            dataGridView1.Rows.Clear();
-            string method_sort = "ORDER BY ProductCost ASC";
-            string method_filter = "";
-            string method = "";
-            switch (comboBox1.SelectedIndex)
-            {
-                case 0: method_sort = "ORDER BY ProductCost ASC"; break;
-                case 1: method_sort = "ORDER BY ProductCost DESC"; break;
-            }
-            switch (comboBox2.SelectedIndex)
-            {
-                case 0: method_filter = "WHERE ProductDiscountAmount > 0 AND ProductDiscountAmount < 10"; break;
-                case 1: method_filter = "WHERE ProductDiscountAmount > 10 AND ProductDiscountAmount < 15"; break;
-                case 2: method_filter = "WHERE ProductDiscountAmount > 15"; break;
-            }
-            method = $"product {method_filter} {method_sort}";
-            products_table = db_connection.LoadData(method);
-            LoadProductDataGridView();
+            SortFilter();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int count = Convert.ToInt32(textBox2.Text);
-            count++;
-            textBox2.Text = $"{count}";
-            dataGridView1.Rows.Clear();
             int pages = products_table.Rows.Count / 20 + 1;
-            if (count == pages)
+            if (pages > count)
             {
-                for (int i = (count - 1) * 20; i < count * 20 - (20 - products_table.Rows.Count % 20); i++)
-                {
-                    DataRow row = products_table.Rows[i];
-                    string path_image = "picture.png";
-                    if (row[4].ToString() != "")
-                    {
-                        path_image = $"Товар_import/{row[4]}";
-                    }
-                    Image o = new Bitmap($"{path_image}");
-                    dataGridView1.Rows.Add(o, $"{row[1]}\n{row[2]}\n{row[5]}\n{row[8]}", $"{row[9]}");
-                }
+                count++;
+                textBox2.Text = $"{count}";
+                LoadProductDataGridView();
             }
-            else
-            {
-                for (int i = (count - 1) * 20; i < count * 20; i++)
-                {
-                    DataRow row = products_table.Rows[i];
-                    string path_image = "picture.png";
-                    if (row[4].ToString() != "")
-                    {
-                        path_image = $"Товар_import/{row[4]}";
-                    }
-                    Image o = new Bitmap($"{path_image}");
-                    dataGridView1.Rows.Add(o, $"{row[1]}\n{row[2]}\n{row[5]}\n{row[8]}", $"{row[9]}");
-                }
-            }
+            
         }
 
         private void searchTextBox_TextChanged(object sender, EventArgs e)
@@ -210,6 +240,24 @@ namespace PR28_Autorization
 
             products_table = db_connection.LoadData(method);
             LoadProductDataGridView();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int pages = products_table.Rows.Count / 20 + 1;
+            if (count > 1)
+            {
+                count--;
+                textBox2.Text = $"{count}";
+                LoadProductDataGridView();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Zakaz form = new Zakaz();
+            form.Show();
+            this.Hide();
         }
     }
 }

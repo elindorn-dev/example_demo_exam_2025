@@ -128,12 +128,14 @@ namespace PR28_Autorization
             // 
             // article
             // 
+            this.article.BackColor = System.Drawing.Color.White;
             this.article.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.article.Location = new System.Drawing.Point(151, 19);
+            this.article.Location = new System.Drawing.Point(158, 19);
             this.article.MaxLength = 6;
             this.article.Name = "article";
             this.article.Size = new System.Drawing.Size(172, 32);
             this.article.TabIndex = 10;
+            this.article.TextChanged += new System.EventHandler(this.article_TextChanged);
             this.article.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.article_KeyPress);
             // 
             // openFileDialog1

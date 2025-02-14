@@ -48,11 +48,48 @@ namespace PR28_Autorization
                     command_sql.ExecuteNonQuery();
                 }
                 connect.Close();
+                
                 return true;
             }
             catch (Exception err)
             {
-                MessageBox.Show($"Ошибка добавления\n{err}");
+                MessageBox.Show($"Ошибка добавления\n{err.Message}");
+                //MessageBox.Show($"{connect_string}");
+                return false;
+            }
+        }
+        public static bool editProduct(string article, string title, string desc, string category, string image_name, string manufact, string supplier, string unit, string cost, string discount, string instock, string maxdiscount)
+        {
+            try
+            {
+                string s_c = $"host={db_connection.host};uid={db_connection.username};pwd={db_connection.pwd};database={db_connection.database}";
+                MySqlConnection connect = new MySqlConnection(s_c);
+                connect.Open();
+                string query = $@"UPDATE `db47`.`product` SET  
+`ProductName` = '{title}', 
+`ProductDescription` = '{desc}', 
+`ProductCategory` = '{category}', 
+`ProductPhoto` = '{image_name}', 
+`ProductManufacturer` = '{manufact}', 
+`ProductSupplier` = '{supplier}',
+`ProductUnit` = '{unit}', 
+`ProductCost` = '{cost}', 
+`ProductDiscountAmount` = '{discount}', 
+`ProductQuantityInStock` = '{instock}', 
+`ProductDiscountMax` = '{maxdiscount}' 
+WHERE (`ProductArticleNumber` = '{article}');";
+                
+                MySqlCommand command_sql = new MySqlCommand(query, connect);
+
+                command_sql.ExecuteNonQuery();
+                    
+                connect.Close();
+
+                return true;
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show($"Ошибка добавления\n{err.Message}");
                 //MessageBox.Show($"{connect_string}");
                 return false;
             }
